@@ -1,5 +1,7 @@
 # Classic Arcade Game Project
 
+The project starter code was provided.
+
 In this game you have a Player and Enemies (Bugs). The goal of the player is to reach the water, without colliding into any one of the Bugs.
 
 - The player can move left, right, up and down using the arrow keys.
