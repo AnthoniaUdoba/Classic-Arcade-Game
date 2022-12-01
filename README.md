@@ -1,4 +1,4 @@
-# Classic-Arcade-Game
+# Classic Arcade Game Project
 
 In this game you have a Player and Enemies (Bugs). The goal of the player is to reach the water, without colliding into any one of the Bugs.
 
