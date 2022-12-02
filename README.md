@@ -4,8 +4,8 @@ The project starter code was provided. I only updated the javascript code by mod
 
 ## Table of Contents
 
-[Installing](###Installing "Goto Installing")
-[Instructions](###Instructions "Goto Instructions")
+- [Installing](###Installing "Goto Installing")
+- [Instructions](###Instructions "Goto Instructions")
 
 ## Installing
 
