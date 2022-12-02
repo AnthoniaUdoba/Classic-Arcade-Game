@@ -3,7 +3,7 @@ class Enemy {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.speed = 100 + Math.floor(Math.random() * 400);
+    this.speed = 200 + Math.floor(Math.random() * 500);
     // The image/sprite for our enemies
     this.sprite = "images/enemy-bug.png";
   }
@@ -15,6 +15,7 @@ class Enemy {
     if (this.x > 550) {
       this.x = -100;
     }
+    //collisioncheck
     if (
       this.x < player.x + 50 &&
       this.x > player.x - 50 &&
@@ -57,19 +58,15 @@ class Player {
     if (move == "down" && this.y < 400) {
       this.y += 83;
     }
+    if (this.y < 0) {
+      setTimeout(() => {
+        this.x = 200;
+        this.y = 400;
+      }, 200);
+    }
   }
-  update() {
-    //collisioncheck
-    allEnemies.forEach((enemy) => {
-      if (
-        this.y === enemy.y &&
-        enemy.x + 50 > this.x &&
-        enemy.x < this.x + 50
-      ) {
-        this.reset();
-      }
-    });
-  }
+  update(dt) {}
+
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
@@ -77,7 +74,11 @@ class Player {
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
-let allEnemies = [new Enemy(0, 67), new Enemy(0, 150), new Enemy(0, 233)];
+let allEnemies = [new Enemy(67), new Enemy(150), new Enemy(233)];
+for (let i = 0; i < 3; i++) {
+  let enemy = new Enemy(-300, 40 + i * 90);
+  allEnemies.push(enemy);
+}
 let player = new Player(210, 400);
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.

@@ -1,10 +1,13 @@
 # Classic Arcade Game Project
 
-The project starter code was provided.
+The project starter code was provided. I only updated the javascript code by modifying app.js file. Try it here!
 
-In this game you have a Player and Enemies (Bugs). The goal of the player is to reach the water, without colliding into any one of the Bugs.
+# Installing
 
-- The player can move left, right, up and down using the arrow keys.
-- The Bugs move in varying speeds on the paved block portion of the scene.
-- Once a the player collides with a Bug, the game is reset and the player moves back to the start square.
-- Once the player reaches the water (i.e., the top of the game board), the game is won.
+You can clone the repo or download it as zip file by clicking on green button "Clone or Download". Once done, open Index.html on any browser of choice.
+
+# Instructions
+
+- Use the keyboard arrow keys to move around.
+- The goal is to get to the water without colliding with the bugs.
+- If you collide with any of the Bugs or reach the water (i.e., the top of the game board), you go back to the start positon.
